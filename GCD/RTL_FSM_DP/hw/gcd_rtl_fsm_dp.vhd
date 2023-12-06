@@ -73,8 +73,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity subtractor is
     port(	rst: in std_logic;
 		cmd: in std_logic_vector( 1 downto 0 );
-		x, y: in std_logic_vector( 3 downto 0 );
-		xout, yout: out std_logic_vector( 3 downto 0 )
+		x, y: in unsigned ( 3 downto 0 );
+		xout, yout: out unsigned ( 3 downto 0 )
     );
 end subtractor;
 
