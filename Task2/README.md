@@ -121,6 +121,7 @@ Study and simulate the VHDL descriptions of the following components (available 
 * **mux4to1**
 * **mux8to1**
 * **D-Flip Flop (DFF)**
+* **PIPO register**
 * **GCD calculator**
 
 Verify that each module works as expected.
@@ -128,3 +129,4 @@ Verify that each module works as expected.
 #### Final Task:
 
 Develop a testbench to test the **GCD module** using the FSM + datapath style. Verify its correctness through simulation.
+
