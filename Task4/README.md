@@ -6,7 +6,7 @@ Using the HDL for system description, XDC for constraints, and Vivado Design Sui
 
 The following state diagram describes a sequence detector in which the detected word on the serial port (`101`) is hardcoded.
 
-![FSM for 101 detector](img/17315580-a8b6-4999-9e52-cf4302acc913.png)
+![FSM for 101 detector](img/fsm.png)
 
 A draft of VHDL code for a Finite State Machine (Moore type — i.e., the output is determined only by the current machine state, and the next machine state is determined by the input and the current machine state) that implements the behavior of the previous diagram is provided within the `hw` repository folder.
 
@@ -25,3 +25,4 @@ You can then perform the FPGA configuration in the same way as in the previous t
 - Simulate the system using a testbench and verify its behavior.
 - Synthesize and implement the design on the FPGA.
 - Verify that it works on the board by toggling the input and clock switches and observing the output on the LED.
+
