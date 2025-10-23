@@ -124,9 +124,10 @@ Study and simulate the VHDL descriptions of the following components (available 
 * **PIPO register**
 * **GCD calculator**
 
-Verify that each module works as expected.
+Verify that each module works as expected. If testbench is missing for some modules, develop it and simulate the module.
 
 #### Final Task:
 
 Develop a testbench to test the **GCD module** using the FSM + datapath style. Verify its correctness through simulation.
+
 
