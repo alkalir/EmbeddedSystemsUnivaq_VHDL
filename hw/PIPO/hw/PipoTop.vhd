@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity TopModule is
+entity PipoTop is
     Port (
         clk        : in  STD_LOGIC;
         rst        : in  STD_LOGIC;
@@ -11,9 +11,9 @@ entity TopModule is
         data_in    : in  STD_LOGIC_VECTOR(15 downto 0);  -- 16-bit data input
         data_out   : out STD_LOGIC_VECTOR(15 downto 0)   -- 16-bit data output
     );
-end TopModule;
+end PipoTop;
 
-architecture Behavioral of TopModule is
+architecture Behavioral of PipoTop is
     -- Instantiate the PIPO register with 16-bit width
     component PIPO
         Generic (
