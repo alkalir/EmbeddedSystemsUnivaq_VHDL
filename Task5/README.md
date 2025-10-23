@@ -55,4 +55,5 @@ Key steps:
 
 ### TODO
 
-Design and implement a MicroBlaze-based system and develop an application that uses the peripherals you've integrated (e.g., print a message over UART or blink an LED using GPIO). Verify the system by observing correct application behavior.
+Design and implement a MicroBlaze-based system and develop an application that uses the peripherals you've integrated (i.e., print a message over UART, use push button and blink LED using GPIO). Verify the system by observing correct application behavior.
+
