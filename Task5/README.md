@@ -1,21 +1,58 @@
 ## Task 5: MicroBlaze
 
-MicroBlaze is Xilinx's 32-bit RISC Harvard architecture soft processor core, equipped with a rich instruction set optimized for embedded applications. The MicroBlaze soft processor solution offers complete flexibility in selecting peripherals, memory, and interface features to tailor the system to specific requirements — all within a single FPGA, reducing system cost.
+**MicroBlaze** is Xilinx's 32-bit RISC Harvard architecture soft processor core, featuring a rich instruction set optimized for embedded applications. It offers high flexibility in selecting peripherals, memory types, and communication interfaces, allowing for a custom system design that fits the specific application requirements—all on a single FPGA, reducing overall system cost.
 
-In this task, the goal is to build a MicroBlaze-based system on the ARTY board and program it.
+The reference manual for MicroBlaze is available at:  
+https://docs.amd.com/r/en-US/ug984-vivado-microblaze-ref
+
+---
+
+### Objective
+
+In this task, you will design a MicroBlaze-based system on the **ARTY board** and run a custom application on it.
+
+This involves:
+
+- Building the **hardware architecture** of the MicroBlaze-based system (using Vivado IP Integrator).
+- Including **on-chip memory (BRAM)** to store program and data.
+- Adding **I/O peripherals** such as **UART** and **GPIO** to enable interaction with the processor.
+- Including a **debug module** (e.g., Debug Module Interface or D_UART) to load and control software execution.
+- Synthesizing the design and generating the **bitstream**.
+- Cross-compiling a C application targeting the MicroBlaze architecture.
+- Programming the bitstream onto the FPGA and loading the compiled software into instruction memory.
+- Validating the system with a basic test application (e.g., *Hello World* or LED blink).
+
+**Important:** If you do not include IO controllers (e.g., UART, GPIO), you will not be able to interact with the processor.
+
+---
 
 ### Instructions
 
-Follow the tutorial provided by Digilent at the following link:
-
+Follow this tutorial from Digilent as a reference:  
 https://digilent.com/reference/programmable-logic/guides/getting-started-with-ipi
 
-Use this guide as a reference to build the system using Vivado’s IP Integrator. Although the ARTY board features a DDR3 memory controller for external memory access, **you should follow the tutorial by not using the DDR3 memory controller**, and instead rely on block RAM as internal memory.
+Key steps:
+
+1. In the section **"Add a MicroBlaze Processor to a Block Design"**, follow the steps to insert and configure the MicroBlaze core into your IP Integrator block diagram.
+2. Select **"boards without DDR memory"** when prompted — the ARTY board has DDR3 but for simplicity, you will implement the design using **on-chip memory only** (BRAM-based).
+3. Add essential peripherals (UART for serial communication, GPIO for LED toggling or user interaction).
+4. Ensure that a **debug interface** (e.g., Debug Module) is included in the design so that programs can be downloaded and executed.
+5. Validate the block design, generate the HDL wrapper, and build the hardware.
+6. Export the hardware platform (including bitstream).
+7. Write a simple application (e.g., LED blink or Hello World), cross-compile it using the **MicroBlaze GCC toolchain**, and load it onto the FPGA system.
+
+---
 
 ### Notes
 
-- You are working on the **ARTY board**, not on Nexys or other Digilent boards. Adapt the tutorial instructions accordingly (e.g., IP configuration, clocking, peripherals).
-- You can use **on-chip memory (BRAM)** for the program and data memory in your design.
-- Once the design is complete, synthesize it, generate the bitstream, and program the FPGA using the Vivado Hardware Manager.
-- A simple “Hello World” application or LED blink (via GPIO) can be used to validate the functioning of the MicroBlaze processor on the FPGA.
+- You are working with the **ARTY board**, not Nexys or other Digilent boards. Make sure to adjust the tutorial accordingly (e.g., clock frequency, available peripherals, constraints).
+- You **must include BRAM**, UART, and GPIO in your design.
+- A **Hello World** application over UART or an **LED blinking** via GPIO is a sufficient test case.
+- You must **synthesize** the design and **generate the bitstream** before running the application.
+- Ensure that the MicroBlaze system includes all required components for boot and debug (e.g., Local Memory Bus, MDM, etc.).
 
+---
+
+### TODO
+
+Design and implement a MicroBlaze-based system and develop an application that uses the peripherals you've integrated (e.g., print a message over UART or blink an LED using GPIO). Verify the system by observing correct application behavior.
