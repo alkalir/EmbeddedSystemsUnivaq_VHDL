@@ -50,10 +50,15 @@ Key steps:
 - A **Hello World** application over UART or an **LED blinking** via GPIO is a sufficient test case.
 - You must **synthesize** the design and **generate the bitstream** before running the application.
 - Ensure that the MicroBlaze system includes all required components for boot and debug (e.g., Local Memory Bus, MDM, etc.).
-
+- If you are using a version of Vitis newer than 2022, there is the possibility that Vitis has a new interface that is not anymore based on Eclipse. Indeed, they started migrating the Vitis tool toward Visual Studio Code base interface. If that is your case, please consider the following points:
+  - Conceptually, the flow is exactly the same between the Eclipse-based flow and Code-based flow
+  - There can be slightly little variation. To get them, please observe also this guide: https://github.com/Xilinx/Vitis-Tutorials/tree/2024.1/Embedded_Software/Getting_Started
+  - Please note that the main guide is still the one from Digilent, and this one from Xilinx serves only to support in migration toward a new tool. 
+  
 ---
 
 ### TODO
 
 Design and implement a MicroBlaze-based system and develop an application that uses the peripherals you've integrated (i.e., print a message over UART, use push button and blink LED using GPIO). Verify the system by observing correct application behavior.
+
 
