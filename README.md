@@ -33,7 +33,7 @@ The files required to carry out the lab (e.g., VHDL source files, testbenches) a
 
 ## Important Notes
 
-- **Before starting the Homelab**, it is essential to study the **VHDL theory**. The slides are available in the [`VHDLTheory`](./VHDLTheory) folder of this repository.
+- **Before starting the Homelab**, it is essential to study the **VHDL theory**. The slides are available in the VHDLTheory folder of this repository.
 - Once all tasks are completed, **send an email** to [giacomo.valente@univaq.it](mailto:giacomo.valente@univaq.it) to **schedule a meeting** and discuss your work.
 - If the discussion goes well, the Homelab is **considered passed**. Otherwise, it must be **repeated** until a satisfactory outcome is achieved.
 
